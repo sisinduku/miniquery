@@ -59,6 +59,7 @@
       EventDispatcher.on('.klass', 'click', function() {
         console.log("Awesome")
       })
+      EventDispatcher.trigger('.klass', 'click')
     }
     function demoAjax() {
         AjaxWrapper.request({
@@ -73,6 +74,7 @@
       })
     }
     function demoMiniQuery() {
+      console.log(miniquery('.klass'));
       // miniquery
       miniquery("#eyed").hide()
       setTimeout(function() {
